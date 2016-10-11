@@ -1,0 +1,409 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:electric_car
+LIBS:ContactorPrecharge-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 550  4200
+$Comp
+L CONN_01X04 P?
+U 1 1 57FC851F
+P 2800 1300
+F 0 "P?" H 2800 1550 50  0000 C CNN
+F 1 "HALL EFFECT" V 2900 1300 50  0000 C CNN
+F 2 "" H 2800 1300 50  0000 C CNN
+F 3 "" H 2800 1300 50  0000 C CNN
+	1    2800 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L AMC1301 U?
+U 1 1 57FC8658
+P 2400 6650
+F 0 "U?" H 2400 6300 60  0000 C CNN
+F 1 "AMC1301" H 2400 7000 60  0000 C CNN
+F 2 "" H 2450 6200 60  0000 C CNN
+F 3 "" H 2450 6200 60  0000 C CNN
+	1    2400 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 57FC8843
+P 1050 5200
+F 0 "R?" V 1130 5200 50  0000 C CNN
+F 1 "R" V 1050 5200 50  0000 C CNN
+F 2 "" V 980 5200 50  0000 C CNN
+F 3 "" H 1050 5200 50  0000 C CNN
+	1    1050 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 57FC8882
+P 1050 6050
+F 0 "R?" V 1130 6050 50  0000 C CNN
+F 1 "R" V 1050 6050 50  0000 C CNN
+F 2 "" V 980 6050 50  0000 C CNN
+F 3 "" H 1050 6050 50  0000 C CNN
+	1    1050 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U?
+U 1 1 57FC8B4A
+P 2200 4550
+F 0 "U?" H 2000 4750 50  0000 L CNN
+F 1 "OPTO-TRANSISTOR" H 2000 4350 50  0000 L CNN
+F 2 "" H 2000 4350 50  0000 L CIN
+F 3 "" H 2200 4550 50  0000 L CNN
+	1    2200 4550
+	-1   0    0    -1  
+$EndComp
+Connection ~ 550  4300
+Connection ~ 550  4100
+Wire Wire Line
+	1050 5350 1050 5900
+Wire Wire Line
+	1050 6200 1050 6800
+Wire Wire Line
+	1050 5600 1500 5600
+Wire Wire Line
+	1500 5600 1500 6700
+Connection ~ 1050 5600
+Wire Wire Line
+	1050 6800 1800 6800
+$Comp
+L Q_NMOS_DGS Q?
+U 1 1 57FCE6EE
+P 8700 1550
+F 0 "Q?" H 9000 1600 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 9350 1500 50  0000 R CNN
+F 2 "" H 8900 1650 50  0000 C CNN
+F 3 "" H 8700 1550 50  0000 C CNN
+	1    8700 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Teensy_3.2 U?
+U 1 1 57FCF1AF
+P 9500 4700
+F 0 "U?" H 9500 4550 39  0000 C CNN
+F 1 "Teensy_3.2" H 9500 5250 39  0000 C CNN
+F 2 "" H 9200 4250 39  0000 C CNN
+F 3 "" H 9200 4250 39  0000 C CNN
+	1    9500 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 1750 8600 1850
+$Comp
+L GNDREF #PWR?
+U 1 1 57FCF60D
+P 8600 1850
+F 0 "#PWR?" H 8600 1600 50  0001 C CNN
+F 1 "GNDREF" H 8600 1700 50  0000 C CNN
+F 2 "" H 8600 1850 50  0000 C CNN
+F 3 "" H 8600 1850 50  0000 C CNN
+	1    8600 1850
+	1    0    0    -1  
+$EndComp
+Text Notes 1300 4900 0    60   ~ 0
+CHOOSE HIGH VOLTAGE OPTO TRANSISTOR
+Text Label 1000 4700 1    60   ~ 0
+HV+
+Text Label 1000 6650 1    60   ~ 0
+HV-
+Text Notes 2000 7300 0    60   ~ 0
+isolation amplifier\n
+Text Notes 900  5900 1    60   ~ 0
+voltage devider
+Wire Wire Line
+	1050 5050 1050 4450
+Wire Wire Line
+	1050 4450 1900 4450
+Wire Wire Line
+	2600 1150 1200 1150
+Wire Wire Line
+	2600 1250 1200 1250
+Wire Wire Line
+	2600 1350 1200 1350
+Wire Wire Line
+	2600 1450 1200 1450
+Text Label 1750 1150 0    60   ~ 0
+voltage5v
+Text Label 1800 1250 0    60   ~ 0
+ground
+Text Label 1750 1350 0    60   ~ 0
+refrence
+Text Label 1800 1450 0    60   ~ 0
+signals
+$Comp
+L GNDREF #PWR?
+U 1 1 57FD3602
+P 1650 7000
+F 0 "#PWR?" H 1650 6750 50  0001 C CNN
+F 1 "GNDREF" H 1650 6850 50  0000 C CNN
+F 2 "" H 1650 7000 50  0000 C CNN
+F 3 "" H 1650 7000 50  0000 C CNN
+	1    1650 7000
+	1    0    0    -1  
+$EndComp
+Text Notes 2050 6200 0    60   ~ 0
+5v
+Text Notes 2650 6200 0    60   ~ 0
+3.3v
+Text Notes 2000 7050 0    60   ~ 0
+out
+$Comp
+L CONN_01X02 P?
+U 1 1 57FD399B
+P 8650 950
+F 0 "P?" H 8650 1100 50  0000 C CNN
+F 1 "CONT_H" V 8750 950 50  0000 C CNN
+F 2 "" H 8650 950 50  0000 C CNN
+F 3 "" H 8650 950 50  0000 C CNN
+	1    8650 950 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8700 1150 8700 1200
+Wire Wire Line
+	8600 1150 8600 1350
+Wire Wire Line
+	8900 1550 9200 1550
+Text Label 8900 1550 0    60   ~ 0
+CNT_H
+$Comp
+L +12V #PWR?
+U 1 1 57FD404C
+P 8900 1200
+F 0 "#PWR?" H 8900 1050 50  0001 C CNN
+F 1 "+12V" H 8900 1340 50  0000 C CNN
+F 2 "" H 8900 1200 50  0000 C CNN
+F 3 "" H 8900 1200 50  0000 C CNN
+	1    8900 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 1200 8900 1200
+Text Label 8350 4900 0    60   ~ 0
+CNT_H
+Wire Wire Line
+	8800 4900 8350 4900
+$Comp
+L Q_NMOS_DGS Q?
+U 1 1 57FD434A
+P 10000 1550
+F 0 "Q?" H 10300 1600 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 10650 1500 50  0000 R CNN
+F 2 "" H 10200 1650 50  0000 C CNN
+F 3 "" H 10000 1550 50  0000 C CNN
+	1    10000 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1750 9900 1850
+$Comp
+L GNDREF #PWR?
+U 1 1 57FD4351
+P 9900 1850
+F 0 "#PWR?" H 9900 1600 50  0001 C CNN
+F 1 "GNDREF" H 9900 1700 50  0000 C CNN
+F 2 "" H 9900 1850 50  0000 C CNN
+F 3 "" H 9900 1850 50  0000 C CNN
+	1    9900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 57FD4357
+P 9950 950
+F 0 "P?" H 9950 1100 50  0000 C CNN
+F 1 "CONT_L" V 10050 950 50  0000 C CNN
+F 2 "" H 9950 950 50  0000 C CNN
+F 3 "" H 9950 950 50  0000 C CNN
+	1    9950 950 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10000 1150 10000 1200
+Wire Wire Line
+	9900 1150 9900 1350
+Wire Wire Line
+	10200 1550 10500 1550
+Text Label 10200 1550 0    60   ~ 0
+CNT_L
+$Comp
+L +12V #PWR?
+U 1 1 57FD4361
+P 10200 1200
+F 0 "#PWR?" H 10200 1050 50  0001 C CNN
+F 1 "+12V" H 10200 1340 50  0000 C CNN
+F 2 "" H 10200 1200 50  0000 C CNN
+F 3 "" H 10200 1200 50  0000 C CNN
+	1    10200 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1200 10200 1200
+Wire Notes Line
+	7600 550  7600 2950
+Wire Notes Line
+	7600 2950 11050 2950
+Text Notes 9050 700  0    60   ~ 0
+Contactors
+Text Label 8350 5000 0    60   ~ 0
+CNT_L
+Wire Wire Line
+	8800 5000 8350 5000
+Wire Notes Line
+	700  3200 4450 3200
+Wire Notes Line
+	4450 3200 4450 7550
+Text Notes 1850 800  0    60   ~ 0
+Hall Efect
+Text Notes 1700 3650 0    60   ~ 0
+Pack Voltage
+Wire Notes Line
+	4500 3200 7600 3200
+Wire Notes Line
+	7600 3200 7600 6200
+Text Notes 5550 3450 0    60   ~ 0
+cell monitor
+$Comp
+L CONN_01X02 P?
+U 1 1 57FD4B7A
+P 5350 4150
+F 0 "P?" H 5350 4300 50  0000 C CNN
+F 1 "CONN_01X02" V 5450 4150 50  0000 C CNN
+F 2 "" H 5350 4150 50  0000 C CNN
+F 3 "" H 5350 4150 50  0000 C CNN
+	1    5350 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 57FD4C12
+P 5300 5000
+F 0 "P?" H 5300 5150 50  0000 C CNN
+F 1 "CONN_01X02" V 5400 5000 50  0000 C CNN
+F 2 "" H 5300 5000 50  0000 C CNN
+F 3 "" H 5300 5000 50  0000 C CNN
+	1    5300 5000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 4100 6150 4100
+Wire Wire Line
+	5550 4200 6150 4200
+Wire Wire Line
+	5500 4950 6150 4950
+Wire Wire Line
+	5500 5050 6150 5050
+Wire Notes Line
+	3850 500  3850 2600
+Wire Notes Line
+	3850 2600 550  2600
+Wire Wire Line
+	2500 4450 3150 4450
+Wire Wire Line
+	2500 4650 2650 4650
+Wire Wire Line
+	2650 4650 2650 5000
+$Comp
+L GNDREF #PWR?
+U 1 1 57FD6198
+P 2650 5000
+F 0 "#PWR?" H 2650 4750 50  0001 C CNN
+F 1 "GNDREF" H 2650 4850 50  0000 C CNN
+F 2 "" H 2650 5000 50  0000 C CNN
+F 3 "" H 2650 5000 50  0000 C CNN
+	1    2650 5000
+	1    0    0    -1  
+$EndComp
+Text Label 2750 4450 0    60   ~ 0
+dv_on
+Wire Wire Line
+	10200 4500 10950 4500
+Wire Wire Line
+	3000 6800 3300 6800
+Text Label 3050 6700 0    60   ~ 0
+Bat_Vp
+Text Label 3050 6800 0    60   ~ 0
+Bat_Vn
+Wire Wire Line
+	10200 4600 10950 4600
+Wire Wire Line
+	8800 4800 8350 4800
+Text Label 8450 4800 0    60   ~ 0
+dv_on
+Wire Wire Line
+	1500 6700 1800 6700
+Wire Wire Line
+	3300 6700 3000 6700
+Text Label 10400 4500 0    60   ~ 0
+Bat_Vp
+Text Label 10400 4600 0    60   ~ 0
+Bat_Vn
+Text Notes 5350 4650 0    60   ~ 0
+cell_L_pnn
+Text Notes 5400 3850 0    60   ~ 0
+cell_H_pnn
+Text Label 5700 4200 0    60   ~ 0
+c_m_H_n
+Text Label 5700 4100 0    60   ~ 0
+c_m_H_p
+Text Label 5600 4950 0    60   ~ 0
+c_m_L_p
+Text Label 5600 5050 0    60   ~ 0
+c_m_L_n
+Wire Wire Line
+	8800 4600 8350 4600
+Wire Wire Line
+	8800 4700 8350 4700
+Text Label 8450 4700 0    60   ~ 0
+c_m_H
+Text Label 8450 4600 0    60   ~ 0
+c_m_L
+$EndSCHEMATC
